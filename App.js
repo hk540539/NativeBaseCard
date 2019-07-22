@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image,StyleSheet,View } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
-import { AppLoading, Font } from 'expo';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -19,12 +19,12 @@ class App extends React.Component {
 
  render(){
   if (this.state.loading) {
-    return <Expo.AppLoading />;
-    // return(
-    //   <View>
-    //     <Text>Still Loading</Text>
-    //   </View>
-    // )
+    // return <Expo.AppLoading />;
+    return(
+      <View>
+        <Text>Still Loading</Text>
+      </View>
+    )
   }
   return (
     <Container>
