@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image,StyleSheet,View } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
-
+import { AppLoading, Font } from 'expo';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,12 +19,12 @@ class App extends React.Component {
 
  render(){
   if (this.state.loading) {
-    // return <Expo.AppLoading />;
-    return(
-      <View>
-        <Text>Still Loading</Text>
-      </View>
-    )
+    return <Expo.AppLoading />;
+    // return(
+    //   <View>
+    //     <Text>Still Loading</Text>
+    //   </View>
+    // )
   }
   return (
     <Container>
@@ -33,7 +33,7 @@ class App extends React.Component {
       <Card>
         <CardItem>
           <Left>
-            <Thumbnail source={{uri: 'Image URL'}} />
+            <Thumbnail source={{uri: 'https://cdn-images-1.medium.com/max/800/1*e2uBLw946pDyqjdV5xAJpQ.png'}} />
             <Body>
               <Text>NativeBase</Text>
               <Text note>GeekyAnts</Text>
@@ -41,7 +41,7 @@ class App extends React.Component {
           </Left>
         </CardItem>
         <CardItem cardBody>
-          <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
+          <Image source={{uri: 'https://www.richestsoft.com/blog/wp-content/uploads/2019/04/react-native-crop.jpg'}} style={{height: 200, width: null, flex: 1}}/>
         </CardItem>
         <CardItem>
           <Left>
